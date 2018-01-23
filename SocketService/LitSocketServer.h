@@ -1,5 +1,5 @@
-#ifndef LIT_HTTPSERVER_H
-#define LIT_HTTPSERVER_H
+#ifndef LIT_SOCKETSERVER_H
+#define LIT_SOCKETSERVER_H
 
 
 #include "LitSocketConfig.h"
@@ -19,6 +19,8 @@ public:
 	void setWebDir(std::string sPath);
 
 	std::string getWebDir();
+
+	int StartListen(int iPort);
 
 private:
 

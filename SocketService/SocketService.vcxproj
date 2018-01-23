@@ -129,7 +129,7 @@
       <WarningLevel>Level3</WarningLevel>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Disabled</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;SOCKETSERVICE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -143,6 +143,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <OutputFile>../win64/bin/$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>../win64/lib/$(TargetName).lib</ImportLibrary>
+      <AdditionalLibraryDirectories>../poco/lib64</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

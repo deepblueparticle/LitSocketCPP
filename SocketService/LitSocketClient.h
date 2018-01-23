@@ -2,6 +2,7 @@
 
 #include "LitSocketConfig.h"
 #include <string>
+#include "Poco/Net/StreamSocket.h"
 
 
 class LIT_SOCKET_API LitSocketClient
@@ -18,10 +19,18 @@ public:
 
 	void SetTimeOut(int iTimeOut);
 
-	int RequestPost(const std::string &sContentType, const std::string &sSend, std::string &sGet);
+	int ConnectServer();
+
+	int SendMsg(const std::string &sContentType, std::string &sGet);
 
 
 private:
+	Poco::Net::StreamSocket m_ss;
+	std::string m_sIp;
+	int m_iPort;
+	int m_iTimeOut;     // 超时时间，单位为秒，默认5s
+
+	bool m_bRun;
 
 };
 

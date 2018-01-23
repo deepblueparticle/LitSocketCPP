@@ -5,15 +5,15 @@
 
 int main()
 {
-//	LitHttpServer server;
-	std::cout << "http server start\n";
-//	server.start("server", "text/html", 5000);	
+	LitSocketServer server;
+	std::cout << "socket server start\n";
+	server.StartListen(5000);	
 
 #ifdef WIN32
 	system("pause");
 #endif // WIN32
 
-	std::cout << "http server stop\n";
+	std::cout << "socket server stop\n";
 //	server.stop();
 
 	return 0;
